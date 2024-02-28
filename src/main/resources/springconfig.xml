@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:component-scan base-package="customers" />
+
+<!--	&lt;!&ndash; Original bean for the field Injection/Hard-coded injection or Manual Injection method&ndash;&gt;-->
+<!--	&lt;!&ndash;	<bean id="customerService" class="customers.CustomerServiceImpl"/> &ndash;&gt;-->
+<!--	&lt;!&ndash; end &ndash;&gt;-->
+
+<!--	&lt;!&ndash;	For setter Injection&ndash;&gt;-->
+<!--	&lt;!&ndash; Define beans &ndash;&gt;-->
+<!--	&lt;!&ndash;	<bean id="customerRepository" class="customers.CustomerRepositoryImpl" />&ndash;&gt;-->
+<!--	&lt;!&ndash;	<bean id="emailSender" class="customers.EmailSenderImpl" />&ndash;&gt;-->
+
+<!--	&lt;!&ndash; Configure CustomerService bean with setter injection &ndash;&gt;-->
+<!--	<bean id="customerService" class="customers.CustomerServiceImpl">-->
+<!--		<property name="customerRepository" ref="customerRepository" />-->
+<!--		<property name="emailSender" ref="emailSender" />-->
+<!--	</bean>-->
+<!--	&lt;!&ndash; end &ndash;&gt;-->
+<!--	&lt;!&ndash;	For constructor Injection&ndash;&gt;-->
+<!--	&lt;!&ndash; Define beans &ndash;&gt;-->
+<!--	<bean id="logger" class="customers.LoggerImpl" />-->
+
+<!--	&lt;!&ndash; Configure CustomerRepositoryImpl bean with constructor injection &ndash;&gt;-->
+<!--	<bean id="customerRepository" class="customers.CustomerRepositoryImpl">-->
+<!--		<constructor-arg ref="logger" />-->
+<!--	</bean>-->
+<!--	<bean id="emailSender" class="customers.EmailSenderImpl">-->
+<!--		<constructor-arg ref="logger"/>-->
+<!--	</bean>-->
+<!--	&lt;!&ndash; end &ndash;&gt;-->
+</beans>
